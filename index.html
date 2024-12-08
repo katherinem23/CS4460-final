@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+        }
+
+        
+        body {
+            background: linear-gradient(135deg, #582215, #feb47b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .landing-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+
+        .title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        #wobble {
+            width: 50%;
+        }
+
+
+        .button {
+            background-color: white;
+            color: #ff7e5f;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ff7e5f;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-container">
+        <img id='wobble' src="wobble.gif"/>
+
+        <h1 class="title">Points of Impact </h1>
+        <p class="subtitle">A basketball data visualization story</p>
+        <p class="names">Team Ballerz: Katherine McNeice, Jeanise Bowling, Chaz Edmond, Aaron Beyene</p>
+        <a href="topic1.html">
+            <button class="button">Learn More</button>
+          </a>
+    </div>
+    
+</body>
+</html>
