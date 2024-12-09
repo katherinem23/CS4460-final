@@ -1,14 +1,4 @@
 
-  #chart {
-    width: 94%;
-    /* Adjust height as needed */
-    height: 90%;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    padding: 3%;
-  }
- 
   
   .tooltip {
     pointer-events: none;
@@ -19,6 +9,30 @@
         font-style: normal;
     
   }
+  #legend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between legend items */
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between the color box and text */
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px; /* Rounded corners for color box */
+    display: inline-block;
+}
+  
   
   .axis text {
     font-size: 12px;
@@ -66,28 +80,40 @@
   .layer rect:hover {
     opacity: 0.8;
   }
+  .chart-container {
+    max-width: 100%; 
+    height: 80%;
+    overflow: hidden;
+   
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    
+
+  }
   #chart {
     width: 95%;
-    height: 80vh;  /* Or you can make it a percentage of the window height */
-    overflow: hidden;  /* Prevent SVG overflow */
+    height: 80vh; 
+    overflow: hidden; 
     background-color: #f4f4f4;
     border-radius: 8px;
     align-items: center;
     border: 1px solid #ccc;
-    padding: 10px;  /* Optional padding */
+    padding: 10px;  
     font-family: "Funnel Display", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: 400;        
+    font-style: normal;
+
   }
   #chart2 {
     width: 100%;
-    height: 80vh;  /* Or you can make it a percentage of the window height */
-    overflow: hidden;  /* Prevent SVG overflow */
+    height: 80vh;  
+    overflow: hidden;  
     background-color: #f4f4f4;
     border-radius: 8px;
     border: 1px solid #ccc;
-    padding: 10px;  /* Optional padding */
+    padding: 10px; 
     font-family: "Funnel Display", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
@@ -119,13 +145,15 @@
   }
   
   #monthDropdown {
-    margin: 20px 0;
-    padding: 10px;
+    
+
     font-size: 14px;
     font-family: "Funnel Display", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
+        align-self: end;
+        margin-right: 1em;
   }
   
   text {
@@ -150,6 +178,39 @@
     opacity: 0.8;
   }
   
-  
-  
-  
+  body {
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    background-color: transparent;
+    flex-direction: column; 
+  }
+
+.chart-container {
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;  
+    padding: 10px; 
+    background-color: #ff8b4c;
+    padding: 1em;
+}
+
+#chart, #chart2 {
+    width: 100%;
+    height: 100%; 
+    overflow: hidden; 
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    font-family: "Funnel Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}

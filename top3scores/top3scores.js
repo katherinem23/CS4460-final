@@ -36,7 +36,7 @@ d3.csv("celtics.csv").then(data => {
     const margin = { top: 40, right: 30, bottom: 200, left: 70 };
     //w and h should be based on div container
     const width = document.getElementById('chart').clientWidth - margin.left - margin.right;
-    const height = document.getElementById('chart').clientHeight - margin.top - margin.bottom;
+    const height = document.getElementById('chart').clientHeight-150;
 
     
 
@@ -73,7 +73,7 @@ d3.csv("celtics.csv").then(data => {
   
 
     svg.append("text")
-      .attr("transform", `translate(${width / 2},${height + margin.bottom - 75})`)
+      .attr("transform", `translate(${width / 2},${height + margin.bottom - 150})`)
       .style("text-anchor", "middle")
       .style("font-size", "14px")
       .text("Game Date");
