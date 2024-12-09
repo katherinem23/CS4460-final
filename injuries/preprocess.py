@@ -2,7 +2,7 @@
 import pandas as pd
 file = pd.read_csv('Team W:L (2022 - 2023).csv')
 
-file = file.iloc[:, :8]
+file = file.iloc[:, :24]
 
 file = file.drop(columns=['B'])
 

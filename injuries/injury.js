@@ -1,5 +1,4 @@
 
-
 const svg = d3.select("#injury");
 
 const plotGroup = svg.append("g").attr("class", "plot-group");
@@ -7,7 +6,17 @@ const axisGroup = svg.append("g").attr("class", "axis-group");
 const injuryGroup = svg.append("g").attr("class", "injury-group");
 const gameGroup = svg.append("g").attr("class", "game-group");
 
-const margin = { top: 20, right: 30, bottom: 30, left: 40 };
+const margin = { top: 20, right: 30, bottom: 20, left: 40 };
+
+const svgWidth = document.getElementById('main').clientWidth - margin.left - margin.right;
+const svgHeight = document.getElementById('main').clientHeight - margin.top - margin.bottom;
+
+const svgElement = document.getElementById('injury');
+console.log(svgHeight)
+svgElement.setAttribute('width', svgWidth);
+svgElement.setAttribute('height', svgHeight);
+
+
 const width = +svg.attr("width") - margin.left - margin.right;
 const height = +svg.attr("height") - margin.top - margin.bottom;
 
@@ -60,9 +69,11 @@ function updateChart(
         .attr("transform", 'translate(0,' + height + ')')
         .call(d3.axisBottom(xScale).ticks(8).tickFormat(d3.timeFormat("%b %d")));
 
+    var yAxis = d3.axisLeft(yScale).ticks(10).tickSize(-width, 0, 0);
+
     axis.append("g")
         .attr("class", "axis axis--y")
-        .call(d3.axisLeft(yScale));
+        .call(yAxis);
 
     axis.append('g')
         .append('text')
@@ -111,8 +122,8 @@ function updateChart(
             } else {
                 return 'green'
             }
-        }) // Set the stroke color
-        .attr('stroke-width', 2); // Set the stroke width
+        })
+        .attr('stroke-width', 2);
     
     const injuryEnter = injury.enter().append('g').attr("transform", 'translate(60,0)')
 
@@ -128,8 +139,8 @@ function updateChart(
             } else {
                 return 'green'
             }
-        }) // Set the stroke color
-        .attr('stroke-width', 2); // Set the stroke width
+        })
+        .attr('stroke-width', 2);
 
     injury.exit().remove()
 
@@ -178,8 +189,8 @@ async function loadDataAndInitializeControls() {
     // Find the unique values
     const teamOptions = [...new Set(data.map(d => d["Team"]))];
 
+    let selectedTeam = teamOptions[0];
 
-    // Initialize the size and milk type radio buttons
     const teamSelectElement = document.querySelector("#team-select");
     teamOptions.forEach(option => {
         const optionElement = document.createElement('option');
@@ -188,7 +199,6 @@ async function loadDataAndInitializeControls() {
         teamSelectElement.appendChild(optionElement);
     });
 
-    let selectedTeam = teamSelectElement.value;
 
     //update chart and player selector when team changed
     teamSelectElement.addEventListener("change", function() {

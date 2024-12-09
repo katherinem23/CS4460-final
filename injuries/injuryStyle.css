@@ -6,7 +6,7 @@ path{
 
 .axis line,
 .axis path {
-    stroke: #555;
+    stroke: rgba(163, 163, 163, 0.75);
 }
 #main {
   background-color: white;
@@ -19,7 +19,9 @@ path{
     border-radius: 16px;
     padding: 8px 16px;
     margin: 8px 0 0px 0;
-    max-width: 240px;
+    max-width: 600px;
+    display:inline-block;
+    flex-direction: row;
 }
 
 circle.dot {
@@ -35,7 +37,7 @@ circle.dot:hover {
 .d3-tip {
     line-height: 1;
     padding: 6px;
-    background: rgba(240, 240, 240, 0.95);
+    background: rgba(240, 240, 240, 0.90);
     color: #333;
     border-radius: 4px;
     font-size: 12px;
@@ -47,7 +49,7 @@ circle.dot:hover {
     font-size: 10px;
     width: 100%;
     line-height: 1;
-    color: rgba(240, 240, 240, 0.95);
+    color: rgba(240, 240, 240, 0.90);
     content: "\25BC";
     position: absolute;
     text-align: center;
@@ -79,3 +81,21 @@ circle.dot:hover {
     padding-top: 10px;
   }
   
+  .legend {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    margin-left: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.color-box {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.label {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}

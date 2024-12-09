@@ -6,17 +6,25 @@
     <link rel="stylesheet" href="./injuryStyle.css">
 </head>
 <body>
-    <div id="main" style="width:1450px">
-        <svg id="injury" width="800" height="500" style="border: 1px solid #ffffff;">
+    <div id="main" style="height:440px">
+        <svg id="injury" style="border: 1px solid #ffffff;">
         </svg>
     </div>
-	<div class="input-grid">
+	<div class="input-grid" style="width:1450px">
+        <label for="team-select">Team:</label>
         <select id="team-select">
             <!-- input options will be created from main.js -->
         </select>
+        <label for="player-select">Player:</label>
         <select id="player-select">
             <!-- input options will be created from main.js -->
         </select>
+        <div class="legend">
+            <div class="color-box" style="background-color: red;"></div>
+            <span class="label">Injured</span>
+            <div class="color-box" style="background-color: green;"></div>
+            <span class="label">Returned</span>
+        </div>
     </div>
 
 </body>
