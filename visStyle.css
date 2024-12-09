@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Playwrite+FR+Moderne:wght@100..400&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Teko:wght@300..700&display=swap');
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #582215, #feb47b); 
+            font-family: "Funnel Display", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .nav-arrow {
+            position: absolute;
+            top: 20px;
+            font-size: 6vw;
+            color: rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, 0.0);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+     
+            transition: background-color 0.3s;
+        }
+
+        .nav-arrow:hover {
+            background-color: rgba(205, 107, 21, 0.7);
+        }
+
+        .next-arrow {
+            right: 20px;
+        }
+
+        .back-arrow {
+            left: 20px;
+        }
+
+        .landing-container {
+            background-color: rgba(39, 39, 39, 0.7);
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 70%;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-family: "Funnel Display", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        .caption {
+            font-size: 1.1rem;
+            color: #f1f1f1;
+            margin-bottom: 30px;
+            padding: 0 20px;
+            max-width: 90%;
+            line-height: 1.5;
+            font-family: "Funnel Display", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        .button {
+            background-color: rgb(162, 82, 1);
+            color: #ffffff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background-color: #ff7e5f;
+            color: white;
+        }
+
+        iframe {
+            width: 100%;
+            height: 60vh;
+            border: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            background-color: rgba(193, 193, 193, 0.7);
+            overflow-y: hidden;
+            
+            
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            padding: 20px;
+            margin-top: 30px;
+            color: #ffffff;
+            background-color: transparent;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 1.5rem;
+            }
+            .caption {
+                font-size: 1rem;
+                max-width: 100%;
+            }
+            iframe {
+                height: 50vh;
+            }
+        }
+  
