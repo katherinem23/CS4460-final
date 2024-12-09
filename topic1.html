@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Points of Impact</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Playwrite+FR+Moderne:wght@100..400&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Teko:wght@300..700&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+        }
+
+        
+        body {
+            background-image: url('basketballvid.mp4');
+            background: linear-gradient(135deg, #582215, #feb47b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .landing-container {
+        
+            padding: 40px;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            line-height: 1.3;            
+            background-color: rgba(39, 39, 39, 0.7);
+            margin: 5%;
+            max-width: 800px;
+            z-index: 1;
+
+        }
+
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: rgb(255, 255, 255);
+            font-family: "Funnel Display", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+     
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color:#ffffff;
+            font-family: "Funnel Display", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+
+        .button {
+            background-color: rgb(162, 82, 1);
+            color: #ffffff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            font-family: "Funnel Display", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        }
+
+        .button:hover {
+            background-color: #ff7e5f;
+            color: white;
+        }
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Ensures video stays behind content */
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover; /* Ensures video covers the entire container */
+        }
+
+        /* Translucent overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+            z-index: 0; /* Below content but above video */
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="basketballvid.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div class="overlay"></div>
+    <div class="landing-container">
+        <h1 class="title">Points of Impact </h1>
+        <p class="subtitle">This visualization dives into the dynamics of basketball team success, exploring how individual player contributions shape the bigger picture. By breaking down game-by-game performances, we reveal the vital role of top players in driving their teams to victory. But what happens when those key players are sidelined? Our story shifts to examine how injuries disrupt team performance, showing the ripple effects of losing critical contributors. Through this narrative, we uncover the interplay between teamwork, individual brilliance, and the resilience required to overcome challenges.</p>
+        <a href="vis1.html">
+        <button class="button">Begin</button>
+        </a>
+    </div>
+    
+</body>
+</html>

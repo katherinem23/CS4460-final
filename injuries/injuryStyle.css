@@ -8,6 +8,11 @@ path{
 .axis path {
     stroke: #555;
 }
+#main {
+  background-color: white;
+  height: 80%;
+
+}
 
 .input-grid {
     background-color: #ffffff;
@@ -36,7 +41,6 @@ circle.dot:hover {
     font-size: 12px;
   }
   
-  /* Creates a small triangle extender for the tooltip */
   .d3-tip:after {
     box-sizing: border-box;
     display: inline;
@@ -49,7 +53,6 @@ circle.dot:hover {
     text-align: center;
   }
   
-  /* Style northward tooltips specifically */
   .d3-tip.n:after {
     margin: -2px 0 0 0;
     top: 100%;
@@ -75,3 +78,4 @@ circle.dot:hover {
   .d3-tip thead tr {
     padding-top: 10px;
   }
+  
