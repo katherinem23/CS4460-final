@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Points of Impact</title>
+    <style>
+                @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Playwrite+FR+Moderne:wght@100..400&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Teko:wght@300..700&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+        }
+
+        
+        body {
+            background: linear-gradient(135deg, #582215, #feb47b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .nav-arrow {
+            position: absolute;
+            top: 20px;
+            font-size: 6vw;
+            color: rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, 0.0);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+     
+            transition: background-color 0.3s;
+        }
+
+        .nav-arrow:hover {
+            background-color: rgba(205, 107, 21, 0.7);
+        }
+
+        .next-arrow {
+            right: 20px;
+        }
+
+        .back-arrow {
+            left: 20px;
+        }
+        .names {
+            font-family: "Funnel Display", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        }
+
+        .landing-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+
+        .title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-family: "Funnel Display", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-family: "Funnel Display", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        }
+        #wobble {
+            width: 50%;
+        }
+
+
+        .button {
+            background-color: white;
+            color: #ff7e5f;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            font-family: "Funnel Display", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        }
+
+        .button:hover {
+            background-color: #ff7e5f;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button class="nav-arrow back-arrow" onclick="window.location.href='topic1.html'">&#8592;</button>
+
+    <div class="landing-container">
+        
+
+        <h1 class="title">The Influence of Injury </h1>
+        <p class="subtitle">In the world of basketball, every player contributes to the team’s success, but what happens when one of the top players gets injured?</p>
+        <a href="vis3.html">
+            <button class="button">Check out the visualization</button>
+          </a>
+    </div>
+    
+</body>
+</html>
